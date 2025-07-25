@@ -17,4 +17,8 @@ class Organization extends Model
         return $this->hasMany(Division::class);
     }
 
+    public function news() {
+        return $this->hasMany(News::class);
+    }
+
 }

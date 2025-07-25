@@ -25,4 +25,8 @@ class Division extends Model
     {
         return $this->hasMany(Division::class, 'parent_id');
     }
+
+    public function news() {
+        return $this->hasMany(News::class);
+    }
 }

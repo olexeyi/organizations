@@ -1,8 +1,10 @@
 <li class="border-t border-gray-300 py-2">
     <div class="flex justify-between items-center">
         <span class="font-medium">
-            <?php echo e($division->name); ?>
+            <a href="<?php echo e(route('news.index', ['division_id' => $division->id])); ?>" class="hover:underline">
+                <?php echo e($division->name); ?>
 
+            </a>
             <?php if($division->head): ?>
                 — <em class="font-light">Глава: <?php echo e($division->head); ?></em>
             <?php endif; ?>

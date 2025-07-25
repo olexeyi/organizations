@@ -1,7 +1,9 @@
 <li class="border-t border-gray-300 py-2">
     <div class="flex justify-between items-center">
         <span class="font-medium">
-            {{ $division->name }}
+            <a href="{{ route('news.index', ['division_id' => $division->id]) }}" class="hover:underline">
+                {{ $division->name }}
+            </a>
             @if ($division->head)
                 — <em class="font-light">Глава: {{ $division->head }}</em>
             @endif

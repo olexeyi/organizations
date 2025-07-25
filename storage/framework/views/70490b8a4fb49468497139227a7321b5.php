@@ -5,7 +5,10 @@
         <div class="mb-8 border-t-4 border-gray-800 pt-4">
             <div class="flex justify-between items-center">
                 <div>
-                    <p class="text-lg font-semibold"><?php echo e($org->name); ?></p>
+                    <a href="<?php echo e(route('news.index', ['organization_id' => $org->id])); ?>" class="font-semibold text-lg hover:underline">
+                        <?php echo e($org->name); ?>
+
+                    </a>
                     <p class="text-sm text-gray-600"><?php echo e($org->phone); ?> | <?php echo e($org->email); ?></p>
                 </div>
 
